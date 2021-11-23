@@ -29,4 +29,8 @@ class Bus:
         person.cash -= self.price
         self.till += self.price
 
+    def pick_up_from_stop(self, bus_stop):
+        for passenger in bus_stop.queue:
+            self.pick_up(passenger)
+
 
